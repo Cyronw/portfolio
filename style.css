@@ -62,14 +62,16 @@ li {
 ul li a {
 	color: rgba(233, 233, 233, 0.705);
 	text-decoration: none;
+	padding: 5px; 
+	border-radius: 0; 
+	transition: color 2s ease, background-color 2s ease, padding 2s ease, border-radius 2s ease; 
 }
 
 ul li a:hover {
 	color: white;
 	background-color: #ffffff21;
-	padding: 10px;
-	border-radius: 3px;
-	transition: 2s;
+	padding: 10px; 
+	border-radius: 3px; 
 }
 
 .me {
@@ -107,6 +109,10 @@ i {
 	font-size: 50px;
 	text-shadow: 5px 1px 5px rgb(0, 0, 0);
 	margin-left: 10px;
+}
+i:hover{
+	text-shadow: 1px 1px 1px rgb(255, 255, 255);
+	transition: 2s;
 }
 
 .contact {
