@@ -5,14 +5,25 @@
 	padding: 0;
 	font-family: 'Comfortaa', cursive;
 	font-weight: bold;
-	/* Correction de 'bol' en 'bold' */
+	
 }
 
 body {
-	background-color: #0A0A0A;
+	background-color: black ;
 	color: white;
+	user-select: none;
 }
+@keyframes project-blink {
 
+	0%,
+	50% {
+		text-shadow: 0 0 2px #2781e7, 0 0 5px #2781e7, 0 0 10px #2781e7, 0 0 20px #2781e7, 0 0 40px #cf0061, 0 0 50px #cf0061, 0 0 60px #2781e7, 0 0 80px #2781e7;
+	}
+
+	50% {
+		text-shadow: 0 0 2px #2781e7, 0 0 5px #2781e7, 0 0 10px #2781e7, 0 0 15px #2781e7, 0 0 20px #cf0061, 0 0 30px #cf0061, 0 0 40px #2781e7, 0 0 60px #2781e7;
+	}
+}
 @keyframes neon-blink {
 
 	0%,
@@ -36,14 +47,16 @@ body {
 		box-shadow: 0 0 1px #f336ea, 0 0 2px #f336ea, 0 0 53px #f336ea, 0 0 5px #f336ea, 0 0 10px #f336ea, 0 0 20px #f336ea, 0 0 30px #f336ea, 0 0 40px #f336eab7;
 	}
 }
-
+hr{
+	margin-top: 100px;
+}
 nav {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	box-sizing: border-box;
-	background-color: black;
+	background-color: #0A0A0A;
 	padding: 20px;
 }
 
@@ -65,6 +78,7 @@ ul li a {
 	padding: 5px; 
 	border-radius: 0; 
 	transition: color 2s ease, background-color 2s ease, padding 2s ease, border-radius 2s ease; 
+	
 }
 
 ul li a:hover {
@@ -114,11 +128,20 @@ i:hover{
 	text-shadow: 1px 1px 1px rgb(255, 255, 255);
 	transition: 2s;
 }
-
-.contact {
+.contact{
+	margin-top: 350px;
+	background-color: #3d3d3d59;
+	padding: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.094);
+}
+.contact h1{
+	text-align: center;
+}
+.media {
 	margin-top: 30px;
 	display: flex;
 	justify-content: center;
+	
 }
 
 .projects {
@@ -128,14 +151,22 @@ i:hover{
 	justify-content: center;
 	align-items: center;
 }
+.projects h1{
+	text-align: center;
+	font-size: 48px;
+	margin-top: 80px;
+	margin-bottom: 20px;
+	animation: 2s project-blink infinite alternate;
+}
 
 .projects img {
 	user-select: none;
-	border: 2px solid rgb(140, 0, 255);
+	border: 2px solid rgba(207, 207, 207, 0.774);
 	border-radius: 5px;
 	margin-top: 20px;
 	height: 400px;
 	width: 600px;
+	animation: project-blink 5s infinite alternate;
 }
 
 .projects h2 {
@@ -158,9 +189,11 @@ i:hover{
 
 @media (max-width: 600px) {
 	body {
-		font-size: 14px;
+		font-size: 20px;
 	}
-
+	nav ul li a {
+		font-size: 16px;
+	}
 	.projects {
 		flex-direction: column;
 		align-items: stretch;
@@ -169,7 +202,7 @@ i:hover{
 	.projects img {
 		width: 100%;
 		height: auto;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 
 	.me img {
@@ -183,6 +216,18 @@ i:hover{
 
 	.contact a {
 		font-size: 30px;
+	}
+	.me p{
+		font-size: 18px;
+	}
+	.me h1{
+		margin-top: 80px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	.projects h1{
+		margin-top: 90px;
 	}
 }
 
